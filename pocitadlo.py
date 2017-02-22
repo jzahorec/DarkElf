@@ -18,6 +18,6 @@ pocasi_domy = int(input("Zadej pocasi na domy v %: "))
 for kolo in range(kola):
     obyvatelstvo = int(((obyvatelstvo/20)+sypka+1)*(porodnost/100)+obyvatelstvo)
     
-print(obyvatelstvo)
+print("Aktualni pocet obyvatel: " + str(obyvatelstvo))
 verb = int(obyvatelstvo*0.8)
-print (verb)
+print ("Pocet obyvatel na verb: " + str(verb))
