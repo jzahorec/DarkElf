@@ -16,7 +16,7 @@ pocasi_mana = int(input("Zadej pocasi na manu v %: "))
 pocasi_domy = int(input("Zadej pocasi na domy v %: "))
 
 for kolo in range(kola):
-    if int(((obyvatelstvo/20)+sypka+1)*(porodnost/100)+obyvatelstvo) > domy:
+    if int(((obyvatelstvo/20)+sypka+1)*(porodnost/100)+obyvatelstvo) + sum(vojsko[0:3]) > domy:
         print ("Domy jsou plné, od tahu " + str(kolo+1))
     else:
         obyvatelstvo = int(((obyvatelstvo/20)+sypka+1)*(porodnost/100)+obyvatelstvo)
