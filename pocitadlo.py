@@ -32,6 +32,6 @@ for kolo in range(kola):
         obyvatelstvo = int(((obyvatelstvo/20)+sypka+1)*(porodnost/100)+obyvatelstvo)
     
 print("Aktualni pocet obyvatel: " + str(obyvatelstvo))
-verb = int(obyvatelstvo*0.8)
+verb = int(obyvatelstvo - domy*0.2)
 print ("Pocet obyvatel na verb: " + str(verb))
 input("Konec programu")
