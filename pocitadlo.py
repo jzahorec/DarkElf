@@ -12,6 +12,11 @@ for i in rasy:
 rasa = input("Zadej svoji rasu" + str(vypis_ras) + ": ")
 while rasa not in rasy:
     rasa = input("Zadej svoji rasu" + str(vypis_ras) + ": ")
+
+verb_koef = 0.2
+if rasa == "Enti":
+	verb_koef = 0.1
+
 obyvatelstvo = int(input("Zadej pocet obyvatel: "))
 domy = int(input("Zadej pocet domu: "))
 vojaci_1 = int(input("Zadej pocet tvych obrannych(jednicek) v zemi: "))
@@ -32,6 +37,8 @@ for kolo in range(kola):
         obyvatelstvo = int(((obyvatelstvo/20)+sypka+1)*(porodnost/100)+obyvatelstvo)
     
 print("Aktualni pocet obyvatel: " + str(obyvatelstvo))
-verb = int(obyvatelstvo - domy*0.2)
+verb = int(obyvatelstvo - domy*verb_koef)
+if verb < 0:
+	verb = 0
 print ("Pocet obyvatel na verb: " + str(verb))
 input("Konec programu")
